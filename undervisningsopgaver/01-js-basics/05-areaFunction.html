@@ -10,9 +10,9 @@
 
 <body>
     <p>Hvad er længden? </p>
-    <input typen="text" id="længde">
+    <input type="text" id="længde">
     <p>Hvad er bredden? </p>
-    <input typen="text" id="bredde">
+    <input type="text" id="bredde">
     <button>Udregn areal og Kig i konsolen</button>
 
     <script>
@@ -21,21 +21,15 @@
         function button_clicked() {
             let længde = document.querySelector("#længde").value;
             let bredde = document.querySelector("#bredde").value;
-            let areal = længde * bredde;
-            let resultat = `Arealet er ${areal} kvadratmeter`;
+            //let areal = længde * bredde;
+            let resultat = `Arealet er ${areal(længde, bredde )} kvadratmeter`;
 
             console.log(resultat);
         }
 
-        /*
-        let længde = 3;
-        let bredde = 5;
-        let areal = længde * bredde;
-
-        let resultat = `Længden er ${længde} meter og bredden er ${bredde} meter. Arealet er ${areal} kvadratmeter`;
-
-        console.log(resultat);
-        */
+        function areal(l, b) {
+            return (l * b);
+        }
 
     </script>
 </body>

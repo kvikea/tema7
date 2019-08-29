@@ -21,21 +21,25 @@
         function button_clicked() {
             let længde = document.querySelector("#længde").value;
             let bredde = document.querySelector("#bredde").value;
-            let areal = længde * bredde;
-            let resultat = `Arealet er ${areal} kvadratmeter`;
+            //let areal = længde * bredde;
+            //let resultat = `Arealet er ${areal(længde, bredde )} kvadratmeter`;
 
-            console.log(resultat);
+            //console.log(resultat);
+            udregnArealogGivFeedback();
         }
 
-        /*
-        let længde = 3;
-        let bredde = 5;
-        let areal = længde * bredde;
-
-        let resultat = `Længden er ${længde} meter og bredden er ${bredde} meter. Arealet er ${areal} kvadratmeter`;
-
-        console.log(resultat);
-        */
+        function udregnArealogGivFeedback(l, b) {
+            const a = (l * b);
+            let svar = "";
+            if (a <= 0) {
+                svar = `${a} - Det er for lille!`;
+            } else if (isNaN(a)) {
+                svar = `${a} - Du skal taste tal!`;
+            } else {
+                svar = `Arealet er ${a} kvadratmeter`;
+            }
+            console.log(svar);
+        }
 
     </script>
 </body>
