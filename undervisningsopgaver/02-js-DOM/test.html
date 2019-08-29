@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="">
+    <style>
+        div {
+            height: 100px;
+            background-color: orange;
+            transition: .5s;
+        }
+
+        section {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax (200px, 1fr));
+            grid-gap: 1em;
+
+        }
+
+        .marker {
+            background-color: blue;
+            border-radius: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </section>
+
+    <script>
+        const diver = document.querySelectorAll("div");
+        console.log(diver);
+
+        diver.forEach(div => {
+            div.addEventListener("click", marker);
+        })
+
+        function marker() {
+            this.classList.toggle("marker");
+        }
+    </script>
+
+</body></html>
+
